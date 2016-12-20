@@ -5,6 +5,7 @@ Web Service API Documentation - https://www.odoo.com/documentation/8.0/api_integ
 ## Usage
 
 Create your credentials for odoo connection 
+
 	public class OdooBase
     {
         protected readonly OdooConnection Connection = new OdooConnection
@@ -17,6 +18,7 @@ Create your credentials for odoo connection
     }
 
 A sample for getting partner id from res.partner model
+
 	public class OdooReadTest : OdooBase
     {
 		public void PartnerList()
