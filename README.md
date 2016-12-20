@@ -1,5 +1,5 @@
 # odoo-integration
-A C# xml-rpc integration library for Odoo 8.0
+A C# xml-rpc integration library for Odoo 8.0 <br />
 Web Service API Documentation - https://www.odoo.com/documentation/8.0/api_integration.html
 
 ## Usage
