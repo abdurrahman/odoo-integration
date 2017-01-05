@@ -8,6 +8,9 @@ namespace Odoo.Integration.Service.Interfaces
         int Create(string dbname, int uid, string pwd, string model, string method, XmlRpcStruct fieldValues);
 
         [XmlRpcMethod("execute")]
+        XmlRpcStruct ButtonProformaVoucher(string dbname, int uid, string pwd, string model, string method, int[] ids);
+
+        [XmlRpcMethod("execute")]
         int[] Search(string dbname, int uid, string pwd, string model, string method, object[] filter, int? offset = null, int? limit = null);
 
         [XmlRpcMethod("execute")]

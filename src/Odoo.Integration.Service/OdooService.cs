@@ -51,6 +51,11 @@ namespace Odoo.Integration.Service
             return _context.OdooData.Create(_connection.Database, _context.UserId, _connection.Password, model, "create", fieldValues);
         }
 
+        public XmlRpcStruct ButtonProformaVoucher(string model, int[] ids)
+        {
+            return _context.OdooData.ButtonProformaVoucher(_connection.Database, _context.UserId, _connection.Password, model, "button_proforma_voucher", ids);
+        }
+
         public int[] Search(string model, object[] filter, int? offset = null, int? limit = null)
         {
             return _context.OdooData.Search(_connection.Database, _context.UserId, _connection.Password, model, "search", filter, offset, limit);
