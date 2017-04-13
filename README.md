@@ -4,7 +4,7 @@ Web Service API Documentation - https://www.odoo.com/documentation/8.0/api_integ
 
 ## Usage
 
-Create your credentials for odoo connection 
+Create your credentials for odoo connection
 
 	public class OdooBase
     {
@@ -20,19 +20,19 @@ Create your credentials for odoo connection
 A sample for getting partner id from res.partner model
 
 	public class OdooReadTest : OdooBase
-    {
+  {
 		public void PartnerList()
 		{
 			var odooService = new OdooService(Connection);
-			
-			// res.partner search filter for user erp code
-            var partnerFilter = new object[]
-            {
-                new object[] {"vat", "=", "TR1234567890"},
-            };
-			
+
+			// res.partner search filter for user vat code
+      var partnerFilter = new object[]
+      {
+          new object[] {"vat", "=", "TR1234567890"},
+      };
+
 			// get partner id from res.partner
-            var partnerIds = odooService.SearchAndRead("res.partner", partnerFilter, new string[] { "id" }, 0, 1);
+      var partnerIds = odooService.SearchAndRead("res.partner", partnerFilter, new string[] { "id" }, 0, 1);
 		}
 	}
 
