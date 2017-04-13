@@ -7,20 +7,20 @@ Web Service API Documentation - https://www.odoo.com/documentation/8.0/api_integ
 Create your credentials for odoo connection
 
 	public class OdooBase
-    {
-        protected readonly OdooConnection Connection = new OdooConnection
-        {
-            Url = "https://mycompany.odoo.com",
-            Database = "database",
-            Username = "admin",
-            Password = "password"
-        };
-    }
+    	{
+		protected readonly OdooConnection Connection = new OdooConnection
+		{
+		    Url = "https://mycompany.odoo.com",
+		    Database = "database",
+		    Username = "admin",
+		    Password = "password"
+		};
+    	}
 
 A sample for getting partner id from res.partner model
 
 	public class OdooReadTest : OdooBase
-   {
+   	{
 		public void PartnerList()
 		{
 			var odooService = new OdooService(Connection);
